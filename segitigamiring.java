@@ -1,18 +1,16 @@
 import java.util.*;
 public class segitigamiring {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan nilai n = ");
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int a, b;
-        for (a = 0; a < n; a++) {
-            for (b = 2 * (n - a); b > 0; b--) {
-                System.out.print(" ");
-            }
-            for (b = 0; b <= a; b++) {
-                System.out.print("* ");
-            }
-            System.out.println();
+        if (n < 0) {
+            System.out.println("Masukan harus positif.");
         }
+        for (int i = 1; i <= n; i++){
+            for (int j = 1; j <= i; j++){
+            System.out.print("*");
+        }
+        System.out.println();
     }
+}
 }
